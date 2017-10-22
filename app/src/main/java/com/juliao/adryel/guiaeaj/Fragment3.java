@@ -30,6 +30,7 @@ public class Fragment3 extends Fragment {
             @Override
             public void onClick(View view) {
                 viewPage.setCurrentItem(1);
+
             }
         });
         //logica do fragment

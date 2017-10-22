@@ -21,6 +21,7 @@ public class MainActivity extends AppCompatActivity {
 
         PagerAdapter pagerAdapter = new FixedTabsPageAdapter(getSupportFragmentManager());
 
+
         viewPager.setAdapter(pagerAdapter);
 
         tabLayout.setupWithViewPager(viewPager);
