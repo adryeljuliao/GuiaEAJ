@@ -12,14 +12,18 @@ public class SetorEAJ {
     private int image;
     private String descricao;
     private int textao;
+    private String telefone;
 
-    public SetorEAJ(String nomeSetor, String horarioFuncionamento, String emailResponsavel, String nomeResponsavel, int image, String descricao) {
+
+
+    public SetorEAJ(String nomeSetor, String horarioFuncionamento, String emailResponsavel, String nomeResponsavel, int image, String descricao, String telefone) {
         this.nomeSetor = nomeSetor;
         this.horarioFuncionamento = horarioFuncionamento;
         this.emailResponsavel = emailResponsavel;
         this.nomeResponsavel = nomeResponsavel;
         this.image = image;
         this.descricao = descricao;
+        this.telefone = telefone;
     }
 
     public SetorEAJ(String nomeSetor, String horarioFuncionamento, int textao) {
@@ -66,7 +70,13 @@ public class SetorEAJ {
     public void setNomeResponsavel(String nomeResponsavel) {
         this.nomeResponsavel = nomeResponsavel;
     }
+    public void setTelefone(String telefone) {
+        this.telefone = telefone;
+    }
 
+    public String getTelefone() {
+        return telefone;
+    }
     public void setImage(int image) {
         this.image = image;
     }

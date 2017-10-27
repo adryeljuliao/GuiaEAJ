@@ -65,12 +65,17 @@ public class FragmentSetores extends Fragment {
             @Override
             public void clickSimples(View view, int position) {
 
-
-
+                findIdWidgets();
+                tabLayout.getTabAt(1).select();
 
                 descricao.setText(listaSetores.get(position).getDescricao());
+                responsavel.setText(listaSetores.get(position).getNomeResponsavel());
+                nomesetor.setText(listaSetores.get(position).getNomeSetor());
+                horario.setText(listaSetores.get(position).getHorarioFuncionamento());
+                telefone.setText(listaSetores.get(position).getTelefone());
+                email.setText(listaSetores.get(position).getEmailResponsavel());
                 //imageView.setBackgroundResource(R.drawable.informatica);
-                tabLayout.getTabAt(1).select();
+
                 imageView.setImageResource(listaSetores.get(position).getImage());
 
             }
@@ -81,8 +86,14 @@ public class FragmentSetores extends Fragment {
     }
 
 
-    public void iniciarWidgets(){
-        imageView = (ImageView) getActivity().findViewById(R.id.image_header);
+    public void findIdWidgets(){
+        imageView = getActivity().findViewById(R.id.image_header);
+        descricao = getActivity().findViewById(R.id.descricaoSetorDetalhes);
+        horario = getActivity().findViewById(R.id.horarioSetorDetalhes);
+        nomesetor = getActivity().findViewById(R.id.nomeSetorDetalhes);
+        responsavel = getActivity().findViewById(R.id.responsavelSetorDetalhes);
+        email = getActivity().findViewById(R.id.emailSetorDetalhes);
+        telefone = getActivity().findViewById(R.id.telefoneSetorDetalhes);
 
 
     }
@@ -90,21 +101,21 @@ public class FragmentSetores extends Fragment {
     public List<SetorEAJ> carregarSetores(){
         List<SetorEAJ> listaSetores = new ArrayList<>();
 
-        listaSetores.add(new SetorEAJ("Informática", "Horario: 8h - 17h", "email.responsavel@gmai.com", "[RESPONSÁVEL]", R.drawable.informatica, "[DESCRIÇÃO]"));
-        listaSetores.add(new SetorEAJ("Biblioteca", "Horario: 8h - 17h", "email.responsavel@gmai.com", "[RESPONSÁVEL]", R.drawable.biblioteca, "[DESCRIÇÃO]"));
-        listaSetores.add(new SetorEAJ("CVT", "Horario: 8h - 17h", "email.responsavel@gmai.com", "[RESPONSÁVEL]", R.drawable.cvt, "[DESCRIÇÃO]"));
-        listaSetores.add(new SetorEAJ("Apicultura", "Horario: 8h - 17h", "email.responsavel@gmai.com", "[RESPONSÁVEL]", R.drawable.apicultura, "[DESCRIÇÃO]"));
-        listaSetores.add(new SetorEAJ("Alojamento feminino", "Horario: 8h - 17h", "email.responsavel@gmai.com", "[RESPONSÁVEL]", R.drawable.aloja_femino, "[DESCRIÇÃO]"));
-        listaSetores.add(new SetorEAJ("Alojamento masculino", "Horario: 8h - 17h", "email.responsavel@gmai.com", "[RESPONSÁVEL]", R.drawable.alojamento_m, "[DESCRIÇÃO]"));
-        listaSetores.add(new SetorEAJ("Diretoria", "Horario: 8h - 17h", "email.responsavel@gmai.com", "[RESPONSÁVEL]", R.drawable.diretoria, "[DESCRIÇÃO]"));
+        listaSetores.add(new SetorEAJ("Informática", "Horario: 8h - 17h", "email.responsavel@gmai.com", "Taniro Chacon", R.drawable.informatica, "[DESCRIÇÃO]", "(84)98115-5569"));
+        listaSetores.add(new SetorEAJ("Biblioteca", "Horario: 8h - 17h", "email.responsavel@gmai.com", "Adriano Dricão", R.drawable.biblioteca, "[DESCRIÇÃO]", "(84)98115-5569"));
+        listaSetores.add(new SetorEAJ("CVT", "Horario: 8h - 17h", "email.responsavel@gmai.com", "[RESPONSÁVEL]", R.drawable.cvt, "[DESCRIÇÃO]", "(84)98115-5569"));
+        listaSetores.add(new SetorEAJ("Apicultura", "Horario: 8h - 17h", "email.responsavel@gmai.com", "[RESPONSÁVEL]", R.drawable.apicultura, "[DESCRIÇÃO]", "(84)98115-5569"));
+        listaSetores.add(new SetorEAJ("Alojamento feminino", "Horario: 8h - 17h", "email.responsavel@gmai.com", "[RESPONSÁVEL]", R.drawable.aloja_femino, "[DESCRIÇÃO]", "(84)98115-5569"));
+        listaSetores.add(new SetorEAJ("Alojamento masculino", "Horario: 8h - 17h", "email.responsavel@gmai.com", "[RESPONSÁVEL]", R.drawable.alojamento_m, "[DESCRIÇÃO]", "(84)98115-5569"));
+        listaSetores.add(new SetorEAJ("Diretoria", "Horario: 8h - 17h", "email.responsavel@gmai.com", "[RESPONSÁVEL]", R.drawable.diretoria, "[DESCRIÇÃO]", "(84)98115-5569"));
 
-        listaSetores.add(new SetorEAJ("Avicultura", "Horario: 8h - 17h", "email.responsavel@gmai.com", "[RESPONSÁVEL]", R.drawable.avicultura, "[DESCRIÇÃO]"));
-        listaSetores.add(new SetorEAJ("Auditorio Santos Dumont", "Horario: 8h - 17h", "email.responsavel@gmai.com", "[RESPONSÁVEL]", R.drawable.auditorio_sd, "[DESCRIÇÃO]"));
-        listaSetores.add(new SetorEAJ("Capela", "Horario: 8h - 17h", "email.responsavel@gmai.com", "[RESPONSÁVEL]", R.drawable.capela, "[DESCRIÇÃO]"));
-        listaSetores.add(new SetorEAJ("Lanchonete", "Horario: 8h - 17h", "email.responsavel@gmai.com", "[RESPONSÁVEL]", R.drawable.lanchonet, "[DESCRIÇÃO]"));
-        listaSetores.add(new SetorEAJ("Predio e-Tec", "Horario: 8h - 17h", "email.responsavel@gmai.com", "[RESPONSÁVEL]", R.drawable.predio_etec, "[DESCRIÇÃO]"));
-        listaSetores.add(new SetorEAJ("Restaurante universitário", "Horario: 8h - 17h", "email.responsavel@gmai.com", "[RESPONSÁVEL]", R.drawable.restaurante, "[DESCRIÇÃO]"));
-        listaSetores.add(new SetorEAJ("Complexo poliesportivo", "Horario: 8h - 17h", "email.responsavel@gmai.com", "[RESPONSÁVEL]", R.drawable.ginasio, "[DESCRIÇÃO]"));
+        listaSetores.add(new SetorEAJ("Avicultura", "Horario: 8h - 17h", "email.responsavel@gmai.com", "[RESPONSÁVEL]", R.drawable.avicultura, "[DESCRIÇÃO]", "(84)98115-5569"));
+        listaSetores.add(new SetorEAJ("Auditorio Santos Dumont", "Horario: 8h - 17h", "email.responsavel@gmai.com", "[RESPONSÁVEL]", R.drawable.auditorio_sd, "[DESCRIÇÃO]", "(84)98115-5569"));
+        listaSetores.add(new SetorEAJ("Capela", "Horario: 8h - 17h", "email.responsavel@gmai.com", "[RESPONSÁVEL]", R.drawable.capela, "[DESCRIÇÃO]", "(84)98115-5569"));
+        listaSetores.add(new SetorEAJ("Lanchonete", "Horario: 8h - 17h", "email.responsavel@gmai.com", "[RESPONSÁVEL]", R.drawable.lanchonet, "[DESCRIÇÃO]", "(84)98115-5569"));
+        listaSetores.add(new SetorEAJ("Predio e-Tec", "Horario: 8h - 17h", "email.responsavel@gmai.com", "[RESPONSÁVEL]", R.drawable.predio_etec, "[DESCRIÇÃO]", "(84)98115-5569"));
+        listaSetores.add(new SetorEAJ("Restaurante universitário", "Horario: 8h - 17h", "email.responsavel@gmai.com", "[RESPONSÁVEL]", R.drawable.restaurante, "[DESCRIÇÃO]", "(84)98115-5569"));
+        listaSetores.add(new SetorEAJ("Complexo poliesportivo", "Horario: 8h - 17h", "email.responsavel@gmai.com", "[RESPONSÁVEL]", R.drawable.ginasio, "[DESCRIÇÃO]", "(84)98115-5569"));
 
         flag = true;
         return listaSetores;
@@ -124,4 +135,6 @@ public class FragmentSetores extends Fragment {
         super.onDestroy();
         Log.i("FRAG", "DESTRUIU a view");
     }
+
+
 }

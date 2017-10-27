@@ -38,7 +38,7 @@ public class SetorAdapter extends RecyclerView.Adapter {
         SetorEAJ setorEscolhido = listaSetores.get(position);
 
         setorViewHolder.nome.setText(setorEscolhido.getNomeSetor());
-        setorViewHolder.horario.setText(setorEscolhido.getHorarioFuncionamento());
+        setorViewHolder.nomeResponsavel.setText(setorEscolhido.getNomeResponsavel());
 
     }
     //retorna o tamanho da lista
@@ -49,12 +49,12 @@ public class SetorAdapter extends RecyclerView.Adapter {
 
     public class SetorViewHolder extends RecyclerView.ViewHolder{
         final TextView nome;
-        final TextView horario;
+        final TextView nomeResponsavel;
 
         public SetorViewHolder(View itemView) {
             super(itemView);
             nome = itemView.findViewById(R.id.nomeSetorCard);
-            horario = itemView.findViewById(R.id.horarioSetorCard);
+            nomeResponsavel = itemView.findViewById(R.id.responsavelSetorCard);
 
         }
     }
