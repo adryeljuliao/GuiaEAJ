@@ -25,13 +25,28 @@ public class FragmentSetores extends Fragment {
 
     //ArrayLis para criar os objetos a serem inflados
     private List<SetorEAJ> listaSetores = new ArrayList<>();
-    TabLayout tabLayout;
+    private TabLayout tabLayout;
+    private boolean flag = false;
+    private TextView descricao;
+    private ImageView imageView;
+    private TextView nomesetor;
+    private TextView horario;
+    private TextView responsavel;
+    private TextView email;
+    private TextView telefone;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         //essa view infla o fragment_um, pois o mesmo possui um recycleView
         View view = inflater.inflate(R.layout.fragment_um, container, false);
         //carregaSetores é o metodo responsavel por criar novo Objetos de setor e add na lista de setores
-        carregarSetores();
+
+        if (!flag){
+            listaSetores = carregarSetores();
+        }
+
+
+
+
 
         //cria-se um recycler view para setar o adapter
         RecyclerView recyclerView = view.findViewById(R.id.recyclerview);
@@ -49,15 +64,14 @@ public class FragmentSetores extends Fragment {
         recyclerView.addOnItemTouchListener(new MyRecyclerView(getActivity(), recyclerView, new MyRecyclerView.ItemTouch() {
             @Override
             public void clickSimples(View view, int position) {
-                TextView descricao;
-                ImageView imageView;
-                descricao = (TextView) getActivity().findViewById(R.id.descricaoSetorDetalhes);
-                imageView = (ImageView) getActivity().findViewById(R.id.image_header);
-                Log.i("stringEnt", ""+listaSetores.get(position).getTextao());
-                descricao.setText(listaSetores.get(position).getTextao());
+
+
+
+
+                descricao.setText(listaSetores.get(position).getDescricao());
                 //imageView.setBackgroundResource(R.drawable.informatica);
                 tabLayout.getTabAt(1).select();
-
+                imageView.setImageResource(listaSetores.get(position).getImage());
 
             }
         }));
@@ -67,11 +81,34 @@ public class FragmentSetores extends Fragment {
     }
 
 
-    public void carregarSetores(){
-        listaSetores.add(new SetorEAJ("Informática", "Horario: 07h - 18h", R.string.descricao_informatica));
-        listaSetores.add(new SetorEAJ("Ensino Médio", "Horario: 07h - 18h", R.string.descricao_informatica));
-        listaSetores.add(new SetorEAJ("Aquicultura", "Horario: 07h - 18h", "kkkw3"));
-        listaSetores.add(new SetorEAJ("Avicultura", "Horario: 07h - 18h", "kkkw3"));
+    public void iniciarWidgets(){
+        imageView = (ImageView) getActivity().findViewById(R.id.image_header);
+
+
+    }
+
+    public List<SetorEAJ> carregarSetores(){
+        List<SetorEAJ> listaSetores = new ArrayList<>();
+
+        listaSetores.add(new SetorEAJ("Informática", "Horario: 8h - 17h", "email.responsavel@gmai.com", "[RESPONSÁVEL]", R.drawable.informatica, "[DESCRIÇÃO]"));
+        listaSetores.add(new SetorEAJ("Biblioteca", "Horario: 8h - 17h", "email.responsavel@gmai.com", "[RESPONSÁVEL]", R.drawable.biblioteca, "[DESCRIÇÃO]"));
+        listaSetores.add(new SetorEAJ("CVT", "Horario: 8h - 17h", "email.responsavel@gmai.com", "[RESPONSÁVEL]", R.drawable.cvt, "[DESCRIÇÃO]"));
+        listaSetores.add(new SetorEAJ("Apicultura", "Horario: 8h - 17h", "email.responsavel@gmai.com", "[RESPONSÁVEL]", R.drawable.apicultura, "[DESCRIÇÃO]"));
+        listaSetores.add(new SetorEAJ("Alojamento feminino", "Horario: 8h - 17h", "email.responsavel@gmai.com", "[RESPONSÁVEL]", R.drawable.aloja_femino, "[DESCRIÇÃO]"));
+        listaSetores.add(new SetorEAJ("Alojamento masculino", "Horario: 8h - 17h", "email.responsavel@gmai.com", "[RESPONSÁVEL]", R.drawable.alojamento_m, "[DESCRIÇÃO]"));
+        listaSetores.add(new SetorEAJ("Diretoria", "Horario: 8h - 17h", "email.responsavel@gmai.com", "[RESPONSÁVEL]", R.drawable.diretoria, "[DESCRIÇÃO]"));
+
+        listaSetores.add(new SetorEAJ("Avicultura", "Horario: 8h - 17h", "email.responsavel@gmai.com", "[RESPONSÁVEL]", R.drawable.avicultura, "[DESCRIÇÃO]"));
+        listaSetores.add(new SetorEAJ("Auditorio Santos Dumont", "Horario: 8h - 17h", "email.responsavel@gmai.com", "[RESPONSÁVEL]", R.drawable.auditorio_sd, "[DESCRIÇÃO]"));
+        listaSetores.add(new SetorEAJ("Capela", "Horario: 8h - 17h", "email.responsavel@gmai.com", "[RESPONSÁVEL]", R.drawable.capela, "[DESCRIÇÃO]"));
+        listaSetores.add(new SetorEAJ("Lanchonete", "Horario: 8h - 17h", "email.responsavel@gmai.com", "[RESPONSÁVEL]", R.drawable.lanchonet, "[DESCRIÇÃO]"));
+        listaSetores.add(new SetorEAJ("Predio e-Tec", "Horario: 8h - 17h", "email.responsavel@gmai.com", "[RESPONSÁVEL]", R.drawable.predio_etec, "[DESCRIÇÃO]"));
+        listaSetores.add(new SetorEAJ("Restaurante universitário", "Horario: 8h - 17h", "email.responsavel@gmai.com", "[RESPONSÁVEL]", R.drawable.restaurante, "[DESCRIÇÃO]"));
+        listaSetores.add(new SetorEAJ("Complexo poliesportivo", "Horario: 8h - 17h", "email.responsavel@gmai.com", "[RESPONSÁVEL]", R.drawable.ginasio, "[DESCRIÇÃO]"));
+
+        flag = true;
+        return listaSetores;
+
     }
 
 

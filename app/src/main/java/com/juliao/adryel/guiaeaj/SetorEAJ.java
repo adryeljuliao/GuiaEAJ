@@ -13,7 +13,14 @@ public class SetorEAJ {
     private String descricao;
     private int textao;
 
-
+    public SetorEAJ(String nomeSetor, String horarioFuncionamento, String emailResponsavel, String nomeResponsavel, int image, String descricao) {
+        this.nomeSetor = nomeSetor;
+        this.horarioFuncionamento = horarioFuncionamento;
+        this.emailResponsavel = emailResponsavel;
+        this.nomeResponsavel = nomeResponsavel;
+        this.image = image;
+        this.descricao = descricao;
+    }
 
     public SetorEAJ(String nomeSetor, String horarioFuncionamento, int textao) {
         this.nomeSetor = nomeSetor;

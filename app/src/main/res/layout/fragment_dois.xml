@@ -18,7 +18,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                android:paddingBottom="16dp"
                 android:paddingLeft="16dp"
                 android:paddingRight="16dp">
 
@@ -27,14 +26,10 @@
                     android:layout_height="wrap_content"
                     android:gravity="center"
                     android:padding="15dp"
-                    android:text="[NOME DO LOCAL]" />
-
-                <ImageView
-                    android:id="@+id/imageSetorDetalhes"
-                    android:layout_width="match_parent"
-                    android:layout_height="280dp"
-                    android:padding="16dp"
-                    android:scaleType="centerCrop" />
+                    android:textSize="20sp"
+                    android:text="[NOME DO LOCAL]"
+                    android:textStyle="bold"
+                    android:textColor="#000"/>
 
             </LinearLayout>
 
@@ -49,33 +44,31 @@
                 android:paddingTop="24dp"
                 android:text="DESCRIÇAO"
                 android:textColor="#000"
-                android:textSize="20sp"
+                android:textSize="16sp"
                 android:textStyle="bold" />
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
+                android:orientation="vertical"
                 android:padding="10dp">
 
-                <ImageView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:contentDescription="@string/app_name"
-                    android:src="@drawable/ic_clock" />
+
 
                 <TextView
                     android:id="@+id/descricaoSetorDetalhes"
-                    android:layout_width="0dp"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
-                    android:layout_weight="9"
                     android:padding="12dp"
                     android:text="[TEXTO DE DESCRIÇÃO]"
                     android:textColor="#4b4b4b"
                     android:textSize="14sp"
                     android:textStyle="bold" />
+
+               <TextView
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"/>
 
             </LinearLayout>
 
