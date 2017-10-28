@@ -23,15 +23,15 @@
 
                 <TextView
                     android:id="@+id/nomeSetorDetalhes"
-                    android:layout_margin="16dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_margin="16dp"
                     android:gravity="center"
                     android:padding="15dp"
+                    android:text="@string/nomeEAJ"
+                    android:textColor="#000"
                     android:textSize="24sp"
-                    android:text="Restaurante Universitário"
-                    android:textStyle="bold"
-                    android:textColor="#000"/>
+                    android:textStyle="bold" />
 
             </LinearLayout>
 
@@ -50,8 +50,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                >
+                android:orientation="vertical">
 
 
                 <TextView
@@ -60,142 +59,145 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
                     android:padding="22dp"
-                    android:text="[TEXTO DE DESCRIÇÃO]"
+                    android:text="@string/descricaoEAJ"
                     android:textColor="#878787"
                     android:textSize="14sp" />
+
                 <View
-                    android:layout_marginTop="5dp"
-                    android:layout_marginRight="15dp"
-                    android:layout_marginLeft="15dp"
                     android:layout_width="match_parent"
                     android:layout_height="1dp"
-                    android:background="#cecece"/>
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginTop="5dp"
+                    android:background="#cecece" />
 
 
             </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="vertical"
+                android:padding="10dp">
 
 
                 <LinearLayout
-                    android:padding="10dp"
-                    android:layout_gravity="center"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical">
+                    android:layout_gravity="center"
+                    android:orientation="horizontal">
 
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="22dp"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:contentDescription="@string/app_name"
+                        android:src="@drawable/ic_contact" />
 
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:orientation="horizontal">
+                    <TextView
+                        android:id="@+id/responsavelSetorDetalhes"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="9"
+                        android:padding="8dp"
+                        android:text="@string/responsavelEAJ"
+                        android:textColor="#4b4b4b"
+                        android:textSize="13sp"
+                        android:textStyle="italic" />
 
-                        <ImageView
-                            android:layout_gravity="center"
-                            android:layout_width="0dp"
-                            android:layout_height="22dp"
-                            android:layout_weight="1"
-                            android:contentDescription="@string/app_name"
-                            android:src="@drawable/ic_contact" />
-
-                        <TextView
-                            android:id="@+id/responsavelSetorDetalhes"
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center_vertical"
-                            android:layout_weight="9"
-                            android:padding="8dp"
-                            android:text="Taniro Chacon"
-                            android:textColor="#4b4b4b"
-                            android:textStyle="italic"
-                            android:textSize="13sp" />
-
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:orientation="horizontal">
-
-                        <ImageView
-                            android:layout_gravity="center"
-                            android:layout_width="0dp"
-                            android:layout_height="22dp"
-                            android:layout_weight="1"
-                            android:src="@drawable/ic_contact_email" />
-
-                        <TextView
-                            android:id="@+id/emailSetorDetalhes"
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center_vertical"
-                            android:layout_weight="9"
-                            android:padding="8dp"
-                            android:text="email.responsavel@gmail.com"
-                            android:textColor="#4b4b4b"
-                            android:textStyle="italic"
-                            android:textSize="13sp" />
-
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:orientation="horizontal">
-
-                        <ImageView
-                            android:layout_gravity="center"
-                            android:layout_width="0dp"
-                            android:layout_height="22dp"
-                            android:layout_weight="1"
-                            android:src="@drawable/ic_smartphone" />
-
-                        <TextView
-                            android:id="@+id/telefoneSetorDetalhes"
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center_vertical"
-                            android:layout_weight="9"
-                            android:padding="8dp"
-                            android:text="9125-5659"
-                            android:textColor="#4b4b4b"
-                            android:textStyle="italic"
-                            android:textSize="13sp" />
-
-                    </LinearLayout>
 
                 </LinearLayout>
 
-            <LinearLayout
-                android:layout_gravity="right"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <ImageView
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
                     android:layout_gravity="center"
-                    android:layout_width="0dp"
-                    android:layout_height="22dp"
-                    android:layout_weight="1"
-                    android:src="@drawable/ic_clock" />
+                    android:orientation="horizontal">
 
-                <TextView
-                    android:id="@+id/horarioSetorDetalhes"
-                    android:layout_width="0dp"
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="22dp"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:src="@drawable/ic_contact_email" />
+
+                    <TextView
+                        android:id="@+id/emailSetorDetalhes"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="9"
+                        android:padding="8dp"
+                        android:text="@string/emailEAJ"
+                        android:textColor="#4b4b4b"
+                        android:textSize="13sp"
+                        android:textStyle="italic" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="22dp"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:src="@drawable/ic_smartphone" />
+
+                    <TextView
+                        android:id="@+id/telefoneSetorDetalhes"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="9"
+                        android:padding="8dp"
+                        android:text="@string/telefoneEAJ"
+                        android:textColor="#4b4b4b"
+                        android:textSize="13sp"
+                        android:textStyle="italic" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical"
-                    android:layout_weight="9"
-                    android:padding="8dp"
-                    android:text="Horario: 07h - 17h"
-                    android:textColor="#4b4b4b"
-                    android:textStyle="italic"
-                    android:textSize="12sp" />
+                    android:layout_gravity="center"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="22dp"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:src="@drawable/ic_clock" />
+
+                    <TextView
+                        android:id="@+id/horarioSetorDetalhes"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="9"
+                        android:padding="8dp"
+                        android:text="@string/horarioEAJ"
+                        android:textColor="#4b4b4b"
+                        android:textSize="12sp"
+                        android:textStyle="italic" />
 
 
+                </LinearLayout>
             </LinearLayout>
 
 
-            </LinearLayout>
+        </LinearLayout>
 
     </android.support.v4.widget.NestedScrollView>
 

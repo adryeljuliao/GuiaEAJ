@@ -1,17 +1,13 @@
 <resources>
     <string name="app_name">Guia EAJ</string>
     <string name="action_settings">Settings</string>
-    <string name="textao">	Lorem ipsum laoreet consectetur per sodales et ultrices facilisis venenatis consequat posuere, fusce volutpat nibh magna ad ullamcorper vulputate egestas vehicula dapibus egestas nunc, egestas libero auctor interdum vitae cubilia metus posuere vel nec. hendrerit erat fusce senectus eros neque hac ante tellus, primis dui morbi inceptos proin ante aptent, quis blandit ullamcorper senectus lobortis senectus ad. ut egestas nostra egestas nostra euismod nisl vel, volutpat morbi nibh adipiscing primis pellentesque eleifend, scelerisque tincidunt libero lacus iaculis laoreet. netus nisi nibh duis senectus donec at lorem eget curabitur sollicitudin sem, odio tempor placerat pharetra cras posuere taciti ad mattis.
 
-	Proin diam nisi nibh metus turpis fusce donec, facilisis euismod ultrices lectus inceptos id tortor, duis ut nam risus semper malesuada. lacinia luctus nulla eu placerat auctor ac donec porta orci, fames pharetra nostra feugiat cursus vestibulum curabitur porttitor, sodales nunc vulputate cubilia mi pellentesque nullam tortor. tristique nam dictumst integer praesent est egestas neque, blandit class mi faucibus litora mi porta venenatis, consequat sapien fringilla aliquam mi himenaeos. nec orci quis torquent auctor tristique pharetra sagittis varius per, amet et suspendisse senectus aliquet rhoncus volutpat bibendum consectetur purus, orci ultrices vitae semper vivamus habitasse fames fermentum.
-
-	Class pretium eu luctus accumsan eros, non bibendum etiam massa egestas, lectus habitant pulvinar elit. pellentesque ultricies tempor sagittis condimentum etiam egestas inceptos consequat nam praesent tellus, est dictumst enim convallis vestibulum platea nulla mollis eros vel porttitor dui, mi mauris eu varius sapien ipsum fermentum nisl convallis tristique. congue dolor nec massa sed aliquam dui consequat vehicula, et velit venenatis conubia viverra mollis gravida, porta egestas habitant quisque pulvinar nullam etiam. aenean porta est phasellus accumsan augue aptent adipiscing, auctor accumsan id nostra vestibulum quam torquent, sapien elementum cras integer etiam vestibulum.
-
-	Justo per non porttitor elit habitant odio in pellentesque, commodo accumsan praesent leo sem habitasse vitae cras erat, turpis interdum placerat sociosqu proin sodales feugiat. neque lacus vulputate praesent commodo vehicula scelerisque ultrices maecenas, sit sodales fermentum conubia cursus velit vel et, scelerisque elementum consequat mattis suscipit bibendum ac. faucibus pellentesque aptent curae aptent fusce proin vivamus proin imperdiet porttitor, nostra consectetur aptent augue nullam pharetra eu enim laoreet, aliquam urna molestie eu varius velit ante metus a. bibendum amet duis augue quisque aliquam pellentesque leo a fermentum, feugiat cubilia felis per ullamcorper orci magna habitant.
-
-	Varius justo et congue nibh dolor vestibulum, rutrum euismod litora auctor tortor aenean, morbi cursus dictumst lobortis aenean. nisl massa himenaeos torquent mauris accumsan arcu rutrum, quisque egestas taciti augue aliquet massa molestie ut, himenaeos enim eros nec lacinia rutrum. etiam est enim rhoncus quis ullamcorper commodo platea a tempor est, sem ligula gravida vel integer himenaeos hac commodo mattis, massa luctus lorem adipiscing vehicula nullam quam convallis quam. odio euismod convallis libero primis phasellus imperdiet nisi molestie netus quisque, pharetra nunc et a sapien varius morbi urna vitae risus enim, justo mollis purus tempor sollicitudin ornare sapien bibendum habitant.
-
-	Curabitur nostra pulvinar dictumst cras per metus risus potenti, euismod faucibus dapibus cubilia aenean odio. </string>
+    <string name="descricaoEAJ">A Escola Agrícola de Jundiaí foi criada pela lei Nº 202 de dezembro de 1949, como "Escola Prática de Agricultura", com localização na antiga Fazenda Jundiaí, distante 3 Km da sede do município de Macaíba, e a 25 Km de Natal, capital do Rio Grande do Norte. </string>
 
 	<string name="descricao_informatica">[DESCIRÇÃO INFORMÁTICA]</string>
+	<string name="nomeEAJ">Escola Agrícola de Jundiaí - UFRN</string>
+	<string name="horarioEAJ">Horario: 6h - 00h</string>
+	<string name="responsavelEAJ">Coordenação</string>
+	<string name="emailEAJ">eaj.ufrn@gov.com.br</string>
+	<string name="telefoneEAJ">(84) 3323-1233</string>
 </resources>

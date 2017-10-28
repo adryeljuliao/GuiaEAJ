@@ -17,6 +17,7 @@ public class MainActivity extends AppCompatActivity {
     private TextView horario;
     private TextView email;
     private TextView responsavel;
+    private TextView telefone;
     private ImageView imageView;
 
     @Override
@@ -25,37 +26,17 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        tabLayout = (TabLayout) findViewById(R.id.tabMain);
-        viewPager = (ViewPager) findViewById(R.id.viewPageMain);
 
+
+        viewPager = (ViewPager) findViewById(R.id.viewPageMain);
+        tabLayout = (TabLayout) findViewById(R.id.tabMain);
         PagerAdapter pagerAdapter = new FixedTabsPageAdapter(getSupportFragmentManager());
-        imageView = (ImageView) findViewById(R.id.image_header);
 
         viewPager.setAdapter(pagerAdapter);
 
         tabLayout.setupWithViewPager(viewPager);
 
-        viewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
-            @Override
-            public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
 
-            }
-
-            @Override
-            public void onPageSelected(int position) {
-                if(position == 0){
-
-                imageView.setImageResource(R.drawable.eaj);
-
-
-                }
-            }
-
-            @Override
-            public void onPageScrollStateChanged(int state) {
-
-            }
-        });
 
     }
 
@@ -64,9 +45,7 @@ public class MainActivity extends AppCompatActivity {
         if(viewPager.getCurrentItem() != 0){
             viewPager.setCurrentItem(0);
         }else{
-
                 super.onBackPressed();
-
         }
     }
 

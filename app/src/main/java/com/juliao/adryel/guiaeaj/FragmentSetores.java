@@ -3,8 +3,8 @@ package com.juliao.adryel.guiaeaj;
 
 
         import android.os.Bundle;
-import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
+import android.support.v4.view.ViewPager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
@@ -25,7 +25,7 @@ public class FragmentSetores extends Fragment {
 
     //ArrayLis para criar os objetos a serem inflados
     private List<SetorEAJ> listaSetores = new ArrayList<>();
-    private TabLayout tabLayout;
+    private ViewPager viewPager;
     private boolean flag = false;
     private TextView descricao;
     private ImageView imageView;
@@ -51,7 +51,7 @@ public class FragmentSetores extends Fragment {
         //cria-se um recycler view para setar o adapter
         RecyclerView recyclerView = view.findViewById(R.id.recyclerview);
         //pega a viewpage da activity main
-        tabLayout = (TabLayout) getActivity().findViewById(R.id.tabMain);
+
 
         //cria-se um adapter
         SetorAdapter adapter = new SetorAdapter(listaSetores, getContext());
@@ -66,7 +66,34 @@ public class FragmentSetores extends Fragment {
             public void clickSimples(View view, int position) {
 
                 findIdWidgets();
-                tabLayout.getTabAt(1).select();
+
+                viewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
+                    @Override
+                    public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
+
+                    }
+
+                    @Override
+                    public void onPageSelected(int position) {
+                        if(position == 0){
+
+                            imageView.setImageResource(R.drawable.eaj);
+                            nomesetor.setText("Escola Agrícola de Jundiaí - UFRN");
+                            telefone.setText("(84) 99256-5566");
+                            descricao.setText(R.string.descricaoEAJ);
+                            responsavel.setText("Coordenação");
+                            horario.setText("Horario: 6h - 22h");
+                            email.setText("eaj.ufrn@gov.com.br");
+                            //nomeSetor.setText("Escola Agricola");
+
+                        }
+                    }
+
+                    @Override
+                    public void onPageScrollStateChanged(int state) {
+
+                    }
+                });
 
                 descricao.setText(listaSetores.get(position).getDescricao());
                 responsavel.setText(listaSetores.get(position).getNomeResponsavel());
@@ -77,7 +104,7 @@ public class FragmentSetores extends Fragment {
                 //imageView.setBackgroundResource(R.drawable.informatica);
 
                 imageView.setImageResource(listaSetores.get(position).getImage());
-
+                viewPager.setCurrentItem(1);
             }
         }));
 
@@ -87,6 +114,7 @@ public class FragmentSetores extends Fragment {
 
 
     public void findIdWidgets(){
+        viewPager = getActivity().findViewById(R.id.viewPageMain);
         imageView = getActivity().findViewById(R.id.image_header);
         descricao = getActivity().findViewById(R.id.descricaoSetorDetalhes);
         horario = getActivity().findViewById(R.id.horarioSetorDetalhes);
@@ -94,14 +122,13 @@ public class FragmentSetores extends Fragment {
         responsavel = getActivity().findViewById(R.id.responsavelSetorDetalhes);
         email = getActivity().findViewById(R.id.emailSetorDetalhes);
         telefone = getActivity().findViewById(R.id.telefoneSetorDetalhes);
-
-
     }
+
 
     public List<SetorEAJ> carregarSetores(){
         List<SetorEAJ> listaSetores = new ArrayList<>();
 
-        listaSetores.add(new SetorEAJ("Informática", "Horario: 8h - 17h", "email.responsavel@gmai.com", "Taniro Chacon", R.drawable.informatica, "[DESCRIÇÃO]", "(84)98115-5569"));
+        listaSetores.add(new SetorEAJ("Informática", "Horario: 8h - 17h", "email.responsavel@gmai.com", "Responsável: Taniro Chacon", R.drawable.informatica, "[DESCRIÇÃO]", "(84)98115-5569"));
         listaSetores.add(new SetorEAJ("Biblioteca", "Horario: 8h - 17h", "email.responsavel@gmai.com", "Adriano Dricão", R.drawable.biblioteca, "[DESCRIÇÃO]", "(84)98115-5569"));
         listaSetores.add(new SetorEAJ("CVT", "Horario: 8h - 17h", "email.responsavel@gmai.com", "[RESPONSÁVEL]", R.drawable.cvt, "[DESCRIÇÃO]", "(84)98115-5569"));
         listaSetores.add(new SetorEAJ("Apicultura", "Horario: 8h - 17h", "email.responsavel@gmai.com", "[RESPONSÁVEL]", R.drawable.apicultura, "[DESCRIÇÃO]", "(84)98115-5569"));

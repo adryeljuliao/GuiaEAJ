@@ -37,16 +37,27 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:contentDescription="@string/app_name"
-                android:src="@drawable/ic_contact" />
+                android:src="@drawable/ic_people" />
 
             <TextView
                 android:id="@+id/responsavelSetorCard"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
-                android:layout_weight="9"
+                android:layout_weight="6"
                 android:padding="12dp"
                 android:text="[Responsavel]"
+                android:textColor="#4b4b4b"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+            <TextView
+                android:id="@+id/horarioSetorCard"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="4"
+                android:padding="12dp"
+                android:text="(21) 4544-5566"
                 android:textColor="#4b4b4b"
                 android:textSize="14sp"
                 android:textStyle="bold" />
