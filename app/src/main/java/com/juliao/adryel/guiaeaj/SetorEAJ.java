@@ -5,6 +5,8 @@ package com.juliao.adryel.guiaeaj;
  */
 
 public class SetorEAJ {
+    private double latitude;
+    private double longetude;
     private String nomeSetor;
     private String horarioFuncionamento;
     private String emailResponsavel;
@@ -16,26 +18,25 @@ public class SetorEAJ {
 
 
 
-    public SetorEAJ(String nomeSetor, String horarioFuncionamento, String emailResponsavel, String nomeResponsavel, int image, String descricao, String telefone) {
-        this.nomeSetor = nomeSetor;
-        this.horarioFuncionamento = horarioFuncionamento;
-        this.emailResponsavel = emailResponsavel;
-        this.nomeResponsavel = nomeResponsavel;
-        this.image = image;
-        this.descricao = descricao;
-        this.telefone = telefone;
-    }
 
-    public SetorEAJ(String nomeSetor, String horarioFuncionamento, int textao) {
+
+
+    public SetorEAJ(String s3, String s2, String s1, String s, int alojamento_m, String nomeSetor, String horarioFuncionamento, double v, int textao) {
         this.nomeSetor = nomeSetor;
         this.horarioFuncionamento = horarioFuncionamento;
         this.textao = textao;
     }
 
-    public SetorEAJ(String nomeSetor, String horarioFuncionamento, String descricao) {
+    public SetorEAJ(String nomeSetor, String horario, String email, String nomeResponsavel, int image, String descricao, String telefone, double latitude, double longetude) {
         this.nomeSetor = nomeSetor;
-        this.horarioFuncionamento = horarioFuncionamento;
+        this.horarioFuncionamento = horario;
         this.descricao = descricao;
+        this.emailResponsavel = email;
+        this.nomeResponsavel = nomeResponsavel;
+        this.image = image;
+        this.telefone = telefone;
+        this.latitude = latitude;
+        this.longetude = longetude;
     }
 
     public void setTextao(int textao) {
@@ -47,12 +48,41 @@ public class SetorEAJ {
         return textao;
     }
 
+    public SetorEAJ( String nomeSetor, String horarioFuncionamento, String emailResponsavel, String nomeResponsavel, int image, String descricao, int textao, String telefone, double latitude, double longetude) {
+        this.latitude = latitude;
+        this.longetude = longetude;
+        this.nomeSetor = nomeSetor;
+        this.horarioFuncionamento = horarioFuncionamento;
+        this.emailResponsavel = emailResponsavel;
+        this.nomeResponsavel = nomeResponsavel;
+        this.image = image;
+        this.descricao = descricao;
+        this.textao = textao;
+        this.telefone = telefone;
+    }
+
+    public void setLatitude(double latitude) {
+        this.latitude = latitude;
+    }
+
+    public void setLongetude(double longetude) {
+        this.longetude = longetude;
+    }
+
     public void setDescricao(String descricao) {
         this.descricao = descricao;
     }
 
     public String getDescricao() {
         return descricao;
+    }
+
+    public double getLatitude() {
+        return latitude;
+    }
+
+    public double getLongetude() {
+        return longetude;
     }
 
     public void setNomeSetor(String nomeSetor) {

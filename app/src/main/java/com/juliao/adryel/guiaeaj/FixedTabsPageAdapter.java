@@ -24,7 +24,7 @@ public class FixedTabsPageAdapter extends FragmentPagerAdapter {
             case 1:
                 return new Fragment2();
             case 2:
-                return new Fragment3();
+                return new Mapa();
             default:
                 return null;
         }

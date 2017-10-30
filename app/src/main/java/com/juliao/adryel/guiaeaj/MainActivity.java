@@ -9,6 +9,8 @@ import android.support.v7.widget.Toolbar;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.google.android.gms.maps.GoogleMap;
+
 public class MainActivity extends AppCompatActivity {
     private TabLayout tabLayout;
     private ViewPager viewPager;
@@ -19,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
     private TextView responsavel;
     private TextView telefone;
     private ImageView imageView;
-
+    public static GoogleMap mGoogleMap;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
